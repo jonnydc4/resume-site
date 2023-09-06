@@ -1,29 +1,109 @@
-<!DOCTYPE HTML>
-
-<html lang=”en”>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
 
-    <meta charset=”UTF-8″>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+        h1 {
+            margin: 0;
+        }
 
-    <meta http-equiv=”X-UA-Compatible” content=”ie=edge”>
+        .container {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
 
-    <title>My Website [Name of the website]</title>
+        h2 {
+            color: #333;
+        }
 
+        p {
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "\2022"; /* Bullet point */
+            color: #333;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
+<header>
+    <h1>Your Name</h1>
+    <p>Web Developer</p>
+</header>
 
-<main>
+<div class="container">
+    <div class="section">
+        <h2>Summary</h2>
+        <p>A passionate web developer with expertise in HTML, CSS, and JavaScript. Experienced in creating responsive and user-friendly websites. Detail-oriented and committed to delivering high-quality work.</p>
+    </div>
 
-    <h1>Welcome to My Website [Name of the website]</h1>
+    <div class="section">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <h3>Web Developer</h3>
+                <p>ABC Company - January 2020 to Present</p>
+                <p>Designed and developed responsive websites using HTML, CSS, and JavaScript. Collaborated with cross-functional teams to ensure project success.</p>
+            </li>
+            <li>
+                <h3>Junior Developer</h3>
+                <p>XYZ Agency - June 2018 to December 2019</p>
+                <p>Assisted senior developers in building web applications and troubleshooting issues. Gained valuable experience in web development best practices.</p>
+            </li>
+        </ul>
+    </div>
 
-    <p>This is my new website hosted on GitHub Pages!</p>
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>University of Example - Graduated May 2018</p>
+            </li>
+        </ul>
+    </div>
+</div>
 
-</main>
-
+<div class="contact-info">
+    <p>Email: your.email@example.com</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>Website: www.yourwebsite.com</p>
+</div>
 </body>
-
 </html>
