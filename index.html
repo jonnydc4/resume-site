@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Jon Carr - CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+            color: #222;
         }
 
         header {
@@ -17,34 +19,54 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            border-bottom: 4px solid #222;
         }
 
         h1 {
             margin: 0;
+            letter-spacing: 1px;
         }
 
         .container {
             background-color: #fff;
-            margin: 20px;
+            margin: 24px auto;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 960px;
+            border-radius: 10px;
         }
 
         h2 {
             color: #333;
+            margin: 0 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8e8e8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 20px;
         }
 
         p {
             margin: 0;
         }
 
+        .section p {
+            margin: 4px 0;
+        }
+
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .section + .section {
+            border-top: 1px solid #efefef;
+            padding-top: 20px;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         ul li::before {
@@ -56,6 +78,57 @@
             margin-left: -1em;
         }
 
+        .section > ul > li {
+            margin: 0 0 16px 0;
+            padding: 0 0 16px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .section > ul > li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Nested lists (bullet points under each role) */
+        .section ul ul {
+            margin-top: 8px;
+            padding-left: 1em;
+        }
+
+        .section ul ul li {
+            margin: 6px 0;
+        }
+
+        .section ul ul li::before {
+            color: #777;
+        }
+
+        /* Experience list specific tweaks */
+        .experience-list > li h3 {
+            margin: 0 0 4px 0;
+        }
+
+        .experience-list > li > p {
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .location {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Remove bullets for top-level items in all sections */
+        .section > ul > li::before { content: none; }
+
+        header p {
+            margin: 6px 0 0 0;
+        }
+
+        a { color: #0a66c2; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
         .contact-info {
             text-align: center;
         }
@@ -63,47 +136,88 @@
 </head>
 <body>
 <header>
-    <h1>Your Name</h1>
-    <p>Web Developer</p>
+    <h1>JON CARR</h1>
+    <p>Software Engineer | AI Model Evaluator | Backend Developer</p>
+    <p><a href="mailto:jonnydc4@gmail.com" style="color:#fff; text-decoration: underline;">jonnydc4@gmail.com</a> · <a href="https://www.linkedin.com/in/jon-carr-dev" style="color:#fff; text-decoration: underline;">linkedin.com/in/jon-carr-dev</a> · 435-315-7548</p>
 </header>
 
 <div class="container">
     <div class="section">
         <h2>Summary</h2>
-        <p>A passionate web developer with expertise in HTML, CSS, and JavaScript. Experienced in creating responsive and user-friendly websites. Detail-oriented and committed to delivering high-quality work.</p>
+        <p>Software Engineering graduate with hands-on experience in backend development, AI model evaluation, and scalable system design. Skilled in Python, JavaScript, and modern web technologies, with a strong foundation in building reliable APIs and evaluating cutting-edge AI systems. Seeking to contribute as a software engineer in an innovative team environment.</p>
+    </div>
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li><strong>Proficient:</strong> Python, JavaScript, GitHub, Docker, REST APIs, AI Model Evaluation, Prompt Engineering, LLM Feedback</li>
+            <li><strong>Familiar:</strong> React, TypeScript, Express, Jest, Java, PostgreSQL, MongoDB</li>
+        </ul>
     </div>
 
     <div class="section">
         <h2>Experience</h2>
-        <ul>
+        <ul class="experience-list">
             <li>
-                <h3>Web Developer</h3>
-                <p>ABCD Company - January 2020 to Present</p>
-                <p>Designed and developed responsive websites using HTML, CSS, and JavaScript. Collaborated with cross-functional teams to ensure project success.</p>
+                <h3>DataAnnotation</h3>
+                <p>Software Engineer (AI Trainer & LLM Evaluator) | January 2025 – Present</p>
+                <p class="location">Remote</p>
+                <ul>
+                    <li>Evaluate large language model (LLM) responses for reasoning quality, factual accuracy, and code correctness in Python-based tasks</li>
+                    <li>Create detailed assessment rubrics for AI-generated responses, including Chain-of-Thought (CoT) evaluation, code review, and answer quality analysis</li>
+                    <li>Edit and refine AI-generated Python code and explanations to align with real-world standards and human reasoning expectations</li>
+                    <li>Execute and verify code locally to ensure successful implementation before advancing conversational workflows</li>
+                    <li>Synthesize model insights to support AI alignment objectives and improve model behavior through RLHF</li>
+                </ul>
             </li>
             <li>
-                <h3>Junior Developer</h3>
-                <p>XYZ Agency - June 2018 to December 2019</p>
-                <p>Assisted senior developers in building web applications and troubleshooting issues. Gained valuable experience in web development best practices.</p>
+                <h3>Rocky Mountain Reserve</h3>
+                <p>Client Service Representative | September 2024 – February 2025</p>
+                <p class="location">Orem, Utah</p>
+                <ul>
+                    <li>Identified and resolved technical issues within the financial software platform; documented solution patterns</li>
+                    <li>Collaborated with development teams to escalate critical bugs and propose architectural improvements</li>
+                    <li>Created comprehensive technical documentation for onboarding new team members</li>
+                    <li>Developed tracking metrics to monitor common client software issues and improve workflows</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Utah Valley University - The Excellence and Innovation Initiative</h3>
+                <p>Software Engineer | January 2024 – August 2024</p>
+                <p class="location">Orem, Utah</p>
+                <ul>
+                    <li>Designed and implemented scalable backend architecture for a university-wide study room reservation system</li>
+                    <li>Built RESTful API services handling authentication, real-time room availability, and messaging</li>
+                    <li>Developed a comprehensive class registration system focused on scalable design and reliability</li>
+                    <li>Collaborated with frontend developers to ensure seamless API integration and optimal UX</li>
+                </ul>
+            </li>
+            
+            <li>
+                <h3>Nerd United LLC</h3>
+                <p>Software Engineering Intern | May 2022 – October 2022</p>
+                <p class="location">Lehi, Utah</p>
+                <ul>
+                    <li>Independently designed and implemented a Slackbot automation tool to improve support efficiency</li>
+                    <li>Contributed to backend development of a cryptocurrency wallet with a focus on security and integrity</li>
+                    <li>Created comprehensive technical documentation to streamline onboarding and reduce support requests</li>
+                    <li>Participated in code reviews to maintain high code quality standards</li>
+                </ul>
             </li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Education</h2>
-        <ul>
+        <ul class="education-list">
             <li>
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>University of Example - Graduated May 2018</p>
+                <h3>Utah Valley University</h3>
+                <p>B.S. Software Engineering | August 2020 – May 2024</p>
+                <p class="location">Orem, Utah</p>
             </li>
         </ul>
     </div>
 </div>
 
-<div class="contact-info">
-    <p>Email: your.email@example.com</p>
-    <p>Phone: (123) 456-7890</p>
-    <p>Website: www.yourwebsite.com</p>
-</div>
+
 </body>
 </html>
